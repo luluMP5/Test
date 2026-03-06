@@ -43,8 +43,8 @@ function renderBoard() {
                 cell.classList.add('empty');
             }
 
-            cell.addEventListener('click', () => dropPiece(col));
-            column.appendChild(cell);
+           const column = document.createElement('div');
+column.className = 'column'; 
         }
 
         gameBoard.appendChild(column);
