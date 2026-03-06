@@ -145,3 +145,5 @@ function computerMove() {
 
     dropPiece(col);
 }
+document.getElementById('current-player').textContent =
+currentPlayer === PLAYER1 ? "🔴 Joueur 1" : "🟡 Joueur 2";
