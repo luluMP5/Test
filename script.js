@@ -45,6 +45,7 @@ function renderBoard() {
 
            const column = document.createElement('div');
 column.className = 'column'; 
+            column.addEventListener('click', () => dropPiece(col));
         }
 
         gameBoard.appendChild(column);
