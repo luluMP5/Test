@@ -106,3 +106,6 @@ h1 {
 .cell.empty {
     background-color: white;
 }
+.cell {
+    transition: transform 0.2s ease;
+}
