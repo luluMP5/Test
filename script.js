@@ -55,8 +55,8 @@ function renderBoard() {
 function dropPiece(col) {
     if (gameOver) return;
 
-    // Trouver la première ligne libre dans la colonne
-    for (let row = 0; row < ROWS; row++) {
+    // Trouver la première ligne libre dans la colonne EN PARTANT DU BAS
+    for (let row = ROWS - 1; row >= 0; row--) {
         if (board[row][col] === 0) {
             board[row][col] = currentPlayer;
             
