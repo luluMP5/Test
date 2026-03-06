@@ -1,3 +1,4 @@
+
 const ROWS = 6;
 const COLS = 7;
 const PLAYER1 = 1;
@@ -43,9 +44,8 @@ function renderBoard() {
                 cell.classList.add('empty');
             }
 
-           const column = document.createElement('div');
-column.className = 'column'; 
-            column.addEventListener('click', () => dropPiece(col));
+            cell.addEventListener('click', () => dropPiece(col));
+            column.appendChild(cell);
         }
 
         gameBoard.appendChild(column);
@@ -64,7 +64,7 @@ function dropPiece(col) {
             // Vérifier si c'est une victoire
             if (checkWin(row, col)) {
                 gameOver = true;
-                document.getElementById('status').textContent = `🎉 Joueur ${currentPlayer} a gagné !`;
+                document.getElementById('status').textContent = 🎉 Joueur ${currentPlayer} a gagné !;
             } else {
                 // Changer de joueur
                 currentPlayer = currentPlayer === PLAYER1 ? PLAYER2 : PLAYER1;
@@ -129,7 +129,7 @@ function checkDirection(row, col, rowDir, colDir, player) {
 function updateUI() {
     document.getElementById('current-player').textContent = currentPlayer;
     if (!gameOver) {
-        document.getElementById('status').textContent = `Au tour du joueur ${currentPlayer}`;
+        document.getElementById('status').textContent = Au tour du joueur ${currentPlayer};
     }
 }
 
@@ -138,13 +138,3 @@ document.getElementById('reset-btn').addEventListener('click', initBoard);
 
 // Initialiser le jeu
 initBoard();
-function computerMove() {
-    let col;
-    do {
-        col = Math.floor(Math.random() * COLS);
-    } while (board[0][col] !== 0);
-
-    dropPiece(col);
-}
-document.getElementById('current-player').textContent =
-currentPlayer === PLAYER1 ? "🔴 Joueur 1" : "🟡 Joueur 2";
