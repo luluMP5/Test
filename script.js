@@ -43,7 +43,7 @@ function renderBoard() {
                 cell.classList.add('empty');
             }
 
-            cell.addEventListener('click', () => dropPiece(col));
+            column.addEventListener('click', () => dropPiece(col));
             column.appendChild(cell);
         }
 
