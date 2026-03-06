@@ -137,3 +137,11 @@ document.getElementById('reset-btn').addEventListener('click', initBoard);
 
 // Initialiser le jeu
 initBoard();
+function computerMove() {
+    let col;
+    do {
+        col = Math.floor(Math.random() * COLS);
+    } while (board[0][col] !== 0);
+
+    dropPiece(col);
+}
