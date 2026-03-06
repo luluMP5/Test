@@ -1,4 +1,3 @@
-
 const ROWS = 6;
 const COLS = 7;
 const PLAYER1 = 1;
@@ -64,7 +63,7 @@ function dropPiece(col) {
             // Vérifier si c'est une victoire
             if (checkWin(row, col)) {
                 gameOver = true;
-                document.getElementById('status').textContent = 🎉 Joueur ${currentPlayer} a gagné !;
+                document.getElementById('status').textContent = `🎉 Joueur ${currentPlayer} a gagné !`;
             } else {
                 // Changer de joueur
                 currentPlayer = currentPlayer === PLAYER1 ? PLAYER2 : PLAYER1;
@@ -129,7 +128,7 @@ function checkDirection(row, col, rowDir, colDir, player) {
 function updateUI() {
     document.getElementById('current-player').textContent = currentPlayer;
     if (!gameOver) {
-        document.getElementById('status').textContent = Au tour du joueur ${currentPlayer};
+        document.getElementById('status').textContent = `Au tour du joueur ${currentPlayer}`;
     }
 }
 
