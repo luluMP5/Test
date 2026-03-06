@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Mon Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance 4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bienvenue sur mon site !</h1>
-  <p>Ceci est ma première page web</p>
+    <div class="container">
+        <h1>Puissance 4</h1>
+        <div class="game-info">
+            <p>Joueur : <span id="current-player">1</span></p>
+            <p id="status">Au tour du joueur 1</p>
+            <button id="reset-btn">Nouvelle Partie</button>
+        </div>
+        <div class="game-board" id="game-board">
+            <!-- Les colonnes seront générées par JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
